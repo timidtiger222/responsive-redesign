@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Website Template: https://www.w3schools.com/howto/howto_website_bootstrap.asp --> 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>CS1300 Assignment 2 | Responsive Redesign</title>
+</head>
+<body>
+
+<!-- Progress Scroll Bar: https://www.w3schools.com/howto/howto_js_scroll_indicator.asp --> 
+<div class="header">
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+</div>
+
+<script>
+  window.onscroll = function() {myFunction()};
+
+  function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+  }
+  </script>
+
+<!-- Image: http://zaagitravel.com/tag/ice-cream/ --> 
+<img class="header-image" src="./assets/header.jpg" alt="21 Choices store"> 
+<div class="container">
+  <h1>21 Choices Website</h1>
+  <h5>PROJECT PROMPT</h5>
+  <p>The goal of this assignment is for you to practice the workflow of redesigning a simple website.
+    You should take away the skills necessary to analyze and identify flaws in an existing interface,
+    create low-fidelity and high-fidelity prototypes for various screen sizes, and build a responsive
+    website based on those prototypes.</p> 
+</div>
+
+<div class="container">
+      <br>
+      <h2>Part 1 : Website Analysis</h2>
+      <div class="project-section-title-bar"></div> 
+      
+      <h5>WEBPAGE SCREENSHOT & DESCRIPTION</h5>
+      <p>For this assignment, I chose to redesign the 21 Choices website, specifically the online order location selection page.
+        21 Choices is a family-owned frozen yogurt store located in Southern California. I chose this webpage because as someone who 
+        frequently goes to 21 Choices (it's personally one of my favorite dessert shops!), I am annoyed/saddened by how poor the website
+        design is in commparison to their sweet treats.
+      </p>
+      
+      <div class="banner-image">
+        <img src="./assets/screenshot.png" alt="website screenshot" width=60%>
+      </div>
+  
+      <a href="http://www.21choices.com/pick-online-order-location"target="_blank"><button>VISIT WEBPAGE</button></a>
+
+      <h5>USABILITY ANALYSIS</h5>
+      <p>First, I conducted a usability analysis on the webpage using the three criteria of 
+        learnability, memorability, and efficiency. 
+      </p>
+      <div class="banner-image">
+        <img class="gallery-item" src="./assets/usability.png" alt="usability analysis" width=80%>
+      </div>
+      
+      <h5>ACCESSIBILITY</h5>
+      <p>Then, I used the WAVE Accessbility program, which identified a few issues with the
+        accessbility as well. 
+        <ul>
+          <li><strong>Heading:</strong> The heading sizes and components on the webpage are inconsistent and highly
+          varied. This can be confusing and reduces the semantic and visual meaning and structure to the page.</li>
+          <li><strong>Empty button:</strong> There are 2 empty buttons on the site, which are buttons 
+          with no text on them to indicate where the button leads to. However, I do not agree with this
+          evaluation because I could not find the empty buttons.</li>
+          <li><strong>Alt text:</strong> Several images had "suspicious" or "non-descriptive" alternate text descriptions.
+            For example, the Claremont store image simply had the alt text "Claremont," which is vague.
+            This negatively impacts accessbility for visually impaired people, such as blind users who rely 
+            on alt text to experience images.</li>
+        </ul>
+      </p>
+      <br>
+
+      <h2>Part 2 : Visual Redesign</h2>
+      <div class="project-section-title-bar"></div> 
+      
+      <h5>LOW-FIDELITY WIREFRAMING</h5>
+      <p>Based on the usability and accessibility analyses, I used Balsamiq to create 3 low-fidelity wireframes
+        (for desktop, tablet, and mobile) outlining how the website could be improved. 
+      </p>
+      <div class="banner-image">
+        <img class="gallery-item" src="./assets/lowfi.png" alt="usability analysis" width=110%>
+      </div>
+      
+      <h5>VISUAL DESIGN STYLE GUIDE</h5>
+      <p>I also created a visual design style guide to increase consistency and cohesion for the high-fidelity prototypes. 
+      </p>
+      <div class="banner-image">
+        <img class="gallery-item" src="./assets/visualguide.png" alt="visual guide" width=60%>
+      </div>
+      
+      <h5>HIGH-FIDELITY PROTOTYPING</h5>
+      <p>I then used Figma to create high-fidelity prototypes based on the low-fidelity wireframes. 
+      </p>
+      <div class="banner-image">
+        <img class="gallery-item" src="./assets/highfi.png" alt="high fidelity prototypes" width=110%>
+      </div>
+      <br>
+
+      <h2>Part 3 : Responsive Redesign</h2>
+      <div class="project-section-title-bar"></div> 
+     
+      <h5>WEBSITE REDESIGN</h5>
+      <p>Finally, I used HTML/CSS to recreate the 21 Choices website according to the high-fidelity prototypes. Buttons and
+        navigational elements are replaced with dummy elements. </p>
+
+      <a href="https://timidtiger222.github.io/redesigned-website/"target="_blank"><button>VIEW REDESIGNED WEBPAGE</button></a>
+
+      <div class="banner-image">
+        <img class="gallery-item" src="./assets/beforeafter.png" alt="before and after" width=110%>
+      </div>
+      <br>
+
+      <br>
+      <br>
+    </div>
+</body>
+</html>
+
